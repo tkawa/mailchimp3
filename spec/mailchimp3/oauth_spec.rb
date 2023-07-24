@@ -27,8 +27,6 @@ describe MailChimp3::OAuth do
     before do
       stub_request(:post, 'https://login.mailchimp.com/oauth2/token')
         .with(body: {
-          'client_id'     => 'foo',
-          'client_secret' => 'bar',
           'code'          => '1234567890',
           'grant_type'    => 'authorization_code',
           'redirect_uri'  => 'http://example.com/oauth/callback'
